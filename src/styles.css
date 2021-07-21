@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* importamos el bootstrap css*/
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* importamos nuestro  css que sera para toda la app*/
+@import './css/bike.css';

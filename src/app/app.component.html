@@ -1,0 +1,19 @@
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <h5><a [routerLink]="['/home']">Carga Garantia</a></h5>
+    
+  <h5><a [routerLink]="['/admin']">listado de garantias cargadas</a></h5>
+  
+  <h5><a [routerLink]="['/galeria']">ver galeria de fotos </a></h5>
+
+  <h5><a [routerLink]="['/about']">about</a></h5>
+
+</div>
+
+<span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776; Open sidebar</span>
+
+
+
+<router-outlet></router-outlet>

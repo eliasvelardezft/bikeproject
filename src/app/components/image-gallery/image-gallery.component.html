@@ -1,0 +1,41 @@
+<div>
+    <div class="row">
+        <div class="col-sm-12 btn btn-primary">
+            Image Gallery
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px;margin-bottom: 10px;">
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-success" (click)="filterBy='all'">Todos los Modelos</button>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-success" (click)="filterBy='adultosrc'">Para Adultos</button>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-success" (click)="filterBy='bkeco'">Economicas</button>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-success" (click)="filterBy='bkmotor'">Con Motor</button>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-success" (click)="filterBy='juniorrc'">Para Nenes</button>
+        </div>
+        <div class="col-sm-1">
+        </div>
+    </div>
+
+<!-- {{ ( allImages | filterimages:'adultosrc' ) | json }} -->
+
+    <div class="row">
+        <ul>
+            <li *ngFor="let img of (allImages | filterimages:filterBy)">
+                <!-- debemos agregar ruta para invocar al component image details -->
+                <a [routerLink]="['/image', img.id]">
+                    <img src="{{img.url}}" class="img" width="240" height="170">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
